@@ -339,25 +339,60 @@ button{ font-family: inherit; cursor: pointer; background:none; border:none; col
 /* Sobre                              */
 /* ---------------------------------- */
 .sobre{ padding: 96px 0; background: var(--cloud); }
-.sobre-inner{
-  display:grid; grid-template-columns: 1.15fr .85fr; gap: 60px; align-items:center;
+
+.sobre-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) 380px;
+  gap: 60px;
+  align-items: center;
 }
-.sobre-copy p{ font-size: 15.5px; }
-.valores{ display:grid; grid-template-columns: repeat(3,1fr); gap:18px; margin-top: 28px; }
+
+.sobre-copy p{ 
+  font-size: 15.5px; 
+}
+
+.valores{ 
+  display:grid; 
+  grid-template-columns: repeat(3,1fr); 
+  gap:18px; 
+  margin-top: 28px; 
+}
+
 .valor-item{
-  background: var(--white); border-radius: var(--radius-sm); padding: 18px 16px;
+  background: var(--white); 
+  border-radius: var(--radius-sm); 
+  padding: 18px 16px;
   border: 1px solid var(--line);
 }
-.valor-label{
-  display:block; font-family: var(--font-display); font-weight:800; font-size:12.5px;
-  letter-spacing:.06em; text-transform:uppercase; color: var(--navy); margin-bottom:6px;
-}
-.valor-item p{ font-size: 13px; margin:0; color: var(--ink); }
 
-.sobre-figure{
-  position: relative; aspect-ratio: 1/1; max-width: 380px; margin: 0 auto;
-  display:flex; align-items:center; justify-content:center;
+.valor-label{
+  display:block; 
+  font-family: var(--font-display); 
+  font-weight:800; 
+  font-size:12.5px;
+  letter-spacing:.06em; 
+  text-transform:uppercase; 
+  color: var(--navy); 
+  margin-bottom:6px;
 }
+
+.valor-item p{ 
+  font-size: 13px; 
+  margin:0; 
+  color: var(--ink); }
+
+.sobre-figure {
+  position: relative;
+  width: 380px;
+  height: 380px;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
 .figure-ring{
   position:absolute; inset:0;
   border-radius:50%;
@@ -566,8 +601,15 @@ button{ font-family: inherit; cursor: pointer; background:none; border:none; col
   .hero-inner{ grid-template-columns: 1fr; }
   .hero-visual{ order:-1; }
   .cards-grid{ grid-template-columns: 1fr 1fr; }
-  .sobre-inner{ grid-template-columns: 1fr; }
-  .sobre-figure{ order:-1; }
+  .sobre-inner{ 
+    grid-template-columns: 1fr; 
+  }
+
+  .sobre-figure {
+  width: 320px;
+  height: 320px;
+  }
+
   .servicos-grid{ grid-template-columns: repeat(3,1fr); }
   .simulador-inner{ grid-template-columns: 1fr; }
   .steps{ grid-template-columns: 1fr; }
@@ -584,10 +626,16 @@ button{ font-family: inherit; cursor: pointer; background:none; border:none; col
     background: var(--navy-ink); padding: 20px 24px; gap:18px;
     border-bottom: 1px solid rgba(255,255,255,0.1);
   }
+  .sobre-figure {
+    width: 250px;
+    height: 250px;
+  }
   .cards-grid{ grid-template-columns: 1fr; }
   .valores{ grid-template-columns: 1fr; }
   .servicos-grid{ grid-template-columns: repeat(2,1fr); }
   .footer-grid{ grid-template-columns: 1fr; }
   .hero{ padding: 56px 0 64px; }
-  .diferenciais, .sobre, .servicos, .simulador, .como-funciona, .faq{ padding: 64px 0; }
+  .diferenciais, .sobre, .servicos, .simulador, .como-funciona, .faq{ 
+    padding: 64px 0; 
+  }
 }
