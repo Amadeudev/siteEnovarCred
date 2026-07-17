@@ -49,6 +49,17 @@
   });
 
   /* ---------------------------------------------------
+     Service showcase — WhatsApp deep links
+  --------------------------------------------------- */
+  const WHATSAPP_NUMBER = "5598992209189";
+
+  document.querySelectorAll(".service-card[data-service]").forEach(function (card) {
+    const service = card.getAttribute("data-service");
+    const msg = "Olá! Vim pelo site e gostaria de saber mais sobre o crédito para " + service + ".";
+    card.href = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(msg);
+  });
+
+  /* ---------------------------------------------------
      Currency helpers
   --------------------------------------------------- */
   const brl = new Intl.NumberFormat("pt-BR", {
